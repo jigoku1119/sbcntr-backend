@@ -17,7 +17,8 @@ phases:
 
     build:
         commands:
-            - docker image build -t ${REPOSITORY_URI}:${IMAGE_TAG} .
+            # --build-arg で AWS_ACCOUNT_ID を渡す
+            - docker image build --build-arg AWS_ACCOUNT_ID=${AWS_ACCOUNT_ID} -t ${REPOSITORY_URI}:${IMAGE_TAG} .
 
     post_build:
         commands:
