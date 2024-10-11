@@ -23,3 +23,9 @@ phases:
     post_build:
         commands:
             - docker push ${REPOSITORY_URI}:${IMAGE_TAG}
+            - sed -i "s/<AWS_ACCOUNT_ID>/${AWS_ACCOUNT_ID}/g" taskdef.json
+            - printf '{"name":"%s","ImageURI":"%s"}' $ECR_REPOSITORY_NAME $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
+
+artifacts:
+    files:
+        - imageDetail.json
