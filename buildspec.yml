@@ -29,3 +29,6 @@ phases:
 artifacts:
     files:
         - imageDetail.json
+      # デプロイステージ用に成果物を追加
+        - appspec.yml
+        - taskdef.json
