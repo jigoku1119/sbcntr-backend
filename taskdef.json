@@ -37,9 +37,9 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/",
+                    "awslogs-group": "/ecs/sbcntr",
                     "awslogs-region": "ap-northeast-1",
-                    "awslogs-stream-prefix": "ecs-backend",
+                    "awslogs-stream-prefix": "sbcntr-backend",
                     "awslogs-create-group": "true",
                     "mode": "non-blocking",
                     "max-buffer-size": "25m"
