@@ -18,19 +18,19 @@
             "secrets": [
                 {
                     "name": "DB_HOST",
-                    "valueFrom": "arn:aws:secretsmanager:ap-northeast-1:<AWS_ACCOUNT_ID>:secret:sbcntr/mysql-jVoSgk:host::"
+                    "valueFrom": "<SECRET_ARN>:host::"
                 },
                 {
                     "name": "DB_NAME",
-                    "valueFrom": "arn:aws:secretsmanager:ap-northeast-1:<AWS_ACCOUNT_ID>:secret:sbcntr/mysql-jVoSgk:dbname::"
+                    "valueFrom": "<SECRET_ARN>:dbname::"
                 },
                 {
                     "name": "DB_USERNAME",
-                    "valueFrom": "arn:aws:secretsmanager:ap-northeast-1:<AWS_ACCOUNT_ID>:secret:sbcntr/mysql-jVoSgk:username::"
+                    "valueFrom": "<SECRET_ARN>:username::"
                 },
                 {
                     "name": "DB_PASSWORD",
-                    "valueFrom": "arn:aws:secretsmanager:ap-northeast-1:<AWS_ACCOUNT_ID>:secret:sbcntr/mysql-jVoSgk:password::"
+                    "valueFrom": "<SECRET_ARN>:password::"
                 }
             ],
             "readonlyRootFilesystem": true,
@@ -47,7 +47,7 @@
         }
     ],
     "family": "sbcntr-backend-def",
-    "executionRoleArn": "arn:aws:iam::<AWS_ACCOUNT_ID>:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::<AWS_ACCOUNT_ID>:role/sbcntr-ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 2,
     "volumes": [],
